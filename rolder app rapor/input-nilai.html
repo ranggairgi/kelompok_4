@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Nilai</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/input-nilai.css">
+    <script defer src="assets/js/input-nilai.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/img/logo.png" alt="Logo" class="logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#" class="active">Input Nilai</a></li>
+                <li><a href="#">Data Siswa</a></li>
+                <li><a href="#">Data Guru</a></li>
+                <li><a href="#">Pengumuman</a></li>
+                <li><a href="#">Cetak Rapor</a></li>
+                <li><a href="login.html" id="logout">Logout</a></li>
+            </ul>
+        </aside>
+        
+        <main class="content">
+            <header>
+                <h1>Input Nilai Raport</h1>
+            </header>
+            <section class="main-content">
+                <div class="form-container">
+                    <h2>Input Nilai Siswa</h2>
+                    <form id="formNilai">
+                        <div class="form-group">
+                            <label for="nama">Nama Siswa</label>
+                            <input type="text" id="nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mataPelajaran">Mata Pelajaran</label>
+                            <select id="mataPelajaran" required>
+                                <option value="Matematika">Matematika</option>
+                                <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                                <option value="IPA">IPA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nilai">Nilai</label>
+                            <input type="number" id="nilai" min="0" max="100" required>
+                        </div>
+                        <button type="submit">Simpan Nilai</button>
+                    </form>
+                </div>
+            
+                <!-- Tabel untuk menampilkan hasil input -->
+                <div class="form-container" id="dataNilaiContainer" style="display: none;">
+                    <h2>Data Nilai Siswa</h2>
+                    <table id="tabelNilai">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Mata Pelajaran</th>
+                                <th>Nilai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Data akan muncul di sini -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>
